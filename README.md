@@ -62,7 +62,7 @@ frontend (React + Vite + Tailwind)  →  nginx  →  backend (FastAPI + Python)
 ### 1. Clone & configure
 
 ```bash
-git clone https://github.com/<you>/doc-qa-app.git
+git clone https://github.com/Shishodiia0/doc-qa-app.git
 cd doc-qa-app
 cp backend/.env.example backend/.env
 # Edit backend/.env and set GROQ_API_KEY=gsk_...

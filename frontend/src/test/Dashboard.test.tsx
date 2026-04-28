@@ -51,7 +51,9 @@ describe('Dashboard', () => {
       },
     })
     renderDashboard()
-    expect(screen.getByText('report.pdf')).toBeInTheDocument()
+    // filename appears in both header and chat panel — use getAllByText
+    const matches = screen.getAllByText('report.pdf')
+    expect(matches.length).toBeGreaterThan(0)
     expect(screen.getByText('A great report about things.')).toBeInTheDocument()
   })
 

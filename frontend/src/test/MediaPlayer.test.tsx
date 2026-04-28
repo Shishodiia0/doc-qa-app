@@ -39,8 +39,10 @@ describe('MediaPlayer', () => {
 
   it('shows formatted timestamps in transcript', () => {
     render(<MediaPlayer docId="d1" fileType="audio" segments={segments} />)
-    expect(screen.getByText('0:00')).toBeInTheDocument()
+    const zeros = screen.getAllByText('0:00')
+    expect(zeros.length).toBeGreaterThan(0)
     expect(screen.getByText('0:05')).toBeInTheDocument()
+    expect(screen.getByText('0:10')).toBeInTheDocument()
   })
 
   it('renders play button for audio', () => {
